@@ -1,0 +1,964 @@
+body {
+  background-color: #f9f9f9;
+}
+
+/* SPLASH SCREEN ************************************* */
+.splashScreen {
+  background-color: #fbfbff;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  transform: scale(0.8, 0.8);
+  z-index: 1;
+}
+
+.splashDiv {
+  position: relative;
+  background-color: #fbfbff;
+  width: 30%;
+  height: 20%;
+}
+
+.splashAnimatedDiv {
+  position: absolute;
+  z-index: 2;
+  background-color: #fbfbff;
+  height: 100%;
+  width: 10%;
+  animation: move 3s ease 0s infinite;
+}
+
+@keyframes move {
+  0% {
+    width: 0%;
+    transform: translateX(-1em);
+  }
+  25% {
+    width: 100%;
+    transform: translateX(0);
+  }
+  50% {
+    width: 100%;
+    transform: translateX(22em);
+  }
+  75% {
+    width: 100%;
+    transform: translateX(0em);
+  }
+  100% {
+    width: 10%;
+    transform: translateX(-1em);
+  }
+}
+
+/* SPLASH SCREEN ******************************************** */
+
+/* Login Component ***************************************** */
+
+.loginDivScreen {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  animation: FADEIN 1s ease-in;
+}
+
+@keyframes FADEIN {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.loginDiv {
+  display: flex;
+  height: 35em;
+  width: 400px;
+  background-color: #fafafa;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  /* box-shadow: 3px 3px 10px gray; */
+  border: 0.5px solid rgb(0, 0, 0, 0.2);
+}
+
+.loginDiv * {
+  transform: scale(0.9);
+}
+
+.loginDiv img:first-child {
+  transform: scale(0.5, 0.5);
+}
+
+.loginDiv button {
+  display: block;
+  position: relative;
+  padding: 0;
+  width: 20em;
+  height: 3.5em;
+  z-index: 1;
+  margin: 10px;
+  color: gray;
+  background-color: #fafafa;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.btnIconDiv {
+  position: absolute;
+  height: 100%;
+  width: 17%;
+  transform: translate(-10px, -14px);
+  padding: 0;
+  z-index: 2;
+  background-color: #fafafa;
+  box-shadow: 3px 3px 6px rgb(0, 0, 0, 0.4);
+  border-radius: 5px 0px 0px 5px;
+}
+
+.btnIconDiv img {
+  transform: scale(1, 1) !important;
+  margin-top: 20%;
+}
+
+.secondIconDiv {
+  background-color: #1778f2;
+}
+
+.loginDiv button:last-child {
+  background-color: #1778f2 !important;
+  color: #fafafa;
+}
+
+.hr {
+  display: inline;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.hr hr {
+  width: 40%;
+  display: inline-block;
+}
+
+.wrapper {
+  margin-top: 5px;
+  width: 80%;
+}
+
+.textfield {
+  width: 23vw;
+  height: 2.5em;
+  border: 0.5px solid rgb(0, 0, 0, 0.4);
+  border-radius: 5px;
+  background-color: #fbfbff;
+  outline: none;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.placeholder {
+  position: absolute;
+  left: 35px;
+  top: 17px;
+
+  padding: 0 4px;
+  background-color: #fbfbff;
+
+  transition: all 120ms ease-in;
+}
+
+.textfield:focus + .placeholder,
+.textfield:not(:placeholder-shown) + .placeholder {
+  top: -3px;
+  left: 3vw;
+  /* font-weight: bold; */
+}
+
+.formButton {
+  width: 16em;
+  height: 50px;
+  border-radius: 25px;
+  background: #2d9dd8;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.formButtonTxt {
+  font-size: 17px;
+  color: white;
+}
+
+.formLink {
+  font-size: 15px;
+  color: grey;
+}
+
+.formLink a {
+  font-size: 15px;
+  color: #2d9dd8;
+  cursor: pointer;
+}
+
+/* Login Component *********************************************** */
+
+/* Signup Component ********************************************** */
+
+.signUpDiv {
+  display: flex;
+  height: 30em !important;
+  width: 400px;
+  background-color: #fafafa;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  /* box-shadow: 3px 3px 10px gray; */
+  border: 0.5px solid rgb(0, 0, 0, 0.2);
+}
+
+.signUpDiv * {
+  transform: scale(0.9);
+}
+
+.signUpDiv .btnIconDiv {
+  position: absolute;
+  height: 100%;
+  width: 17%;
+  transform: translate(-10px, -14.5px) !important;
+  padding: 0;
+  z-index: 2;
+  background-color: #fafafa;
+  box-shadow: 3px 3px 6px rgb(0, 0, 0, 0.4);
+  border-radius: 5px 0px 0px 5px;
+}
+
+.signUpDiv img:first-child {
+  transform: scale(0.5, 0.5);
+}
+
+/* Sign Up ************************************************* */
+
+/* Sign Up With Email *************************************** */
+
+.emailSignUpDiv {
+  display: flex;
+  height: 35em !important;
+  width: 500px;
+  background-color: #fafafa;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  border: 0.5px solid rgb(0, 0, 0, 0.2);
+}
+
+.emailSignUpDiv .placeholder {
+  transform: translateY(1px);
+}
+
+.userInfoDiv {
+  width: 80% !important;
+  display: flex;
+  transform: scale(1, 1);
+  justify-content: space-between;
+}
+
+.emailSignUpDiv .textfield {
+  width: 100% !important;
+  height: 3em;
+}
+
+.userInfoDivPassword {
+  display: flex;
+  width: 80% !important;
+  transform: scale(0.9, 0.9);
+}
+
+.emailSignUpDiv .wrapper {
+  width: 100% !important;
+  transform: scale(1, 1);
+}
+
+.emailSignUpDiv .placeholder {
+  transform: translateX(-12px);
+}
+
+.emailSignUpDiv input {
+  width: 95% !important;
+  transform: scale(1, 0.9);
+}
+
+.emailSignUpDiv .userInfoDivPassword .textfield:focus + .placeholder,
+.textfield:not(:placeholder-shown) + .placeholder {
+  top: -3px;
+  left: 3vw;
+  transform: scale(0.8);
+  /* font-weight: bold; */
+}
+
+.emailSignUpDiv h3 {
+  margin-block-end: 5px;
+}
+
+.agreement {
+  margin: 10px;
+  margin-block-end: 0px;
+}
+
+.agreement input {
+  margin: 5px;
+  margin-block-end: 0px;
+}
+
+/* Side Nav ****************************************** */
+
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  width: 7vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 5;
+  justify-content: flex-end;
+  align-items: center;
+  left: 0;
+  position: sticky;
+}
+
+.sideNav div {
+  display: flex;
+  width: 100%;
+  height: 12vh;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-3vh);
+}
+
+.sideNav img {
+  transform: scale(0.3, 0.3);
+  background-color: white;
+}
+
+/* Side Nav ****************************************** */
+
+/* Top Nav ******************************************* */
+
+.topNav {
+  display: flex;
+  flex-direction: row;
+  width: 93vw;
+  height: 13vh;
+  background-color: #ffffff;
+  z-index: -1;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  position: relative;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.2);
+}
+
+.topNav .logoDiv {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 2.5vw;
+}
+
+.topNav .logo {
+  width: 100%;
+  height: 100%;
+  transform: scale(1, 1);
+}
+
+.topNav .profilePictureDiv {
+  width: 20vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.topNav .profilePicture {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #2d9dd8;
+}
+
+.topNav button {
+  border: 0.5px solid darkblue;
+  background-color: #ffffff;
+  width: 6vw;
+  height: 4vh;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.topNav .notificationIcon {
+  width: 4vw;
+  height: 4vh;
+}
+
+/* Top Nav ******************************************* */
+
+/* Dashboard ****************************************** */
+
+.dashboard {
+  height: 85vh;
+  width: 57vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.dashboard .heading {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  margin-block-start: 0;
+}
+
+.dashboard h1 {
+  color: #1a181a;
+  opacity: 0.8;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.dashboard h3 {
+  padding-left: 0;
+  text-align: start;
+  margin-block-start: 10px;
+  color: #1a181a;
+  opacity: 0.6;
+}
+
+.dChartDiv {
+  width: 57vw;
+  height: 25vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dChart {
+  height: 22vh;
+  width: 15vw;
+  margin: 25px;
+  margin-block-start: 2vh;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+.progressWrapper {
+  align-self: flex-start;
+  height: 1vh;
+  border-radius: 5px;
+  margin-block-end: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.dChart .progress {
+  height: 0.75vh;
+  background: gold;
+  animation: progressBar 1s ease-in-out;
+  animation-fill-mode: both;
+  border-radius: 5px;
+}
+
+.dChart h2 {
+  font-size: x-large;
+  margin-block-start: 10;
+  color: rgb(0, 0, 0, 0.8);
+}
+
+.dChart h3 {
+  font-size: medium;
+  font-weight: 500;
+  align-self: flex-start;
+  margin-block-start: 10;
+  color: rgb(0, 0, 0, 0.9);
+}
+
+.dChart:nth-of-type(2) .progress {
+  background: red;
+}
+
+.dChart:nth-of-type(3) .progress {
+  background: lightgreen;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.messagesDiv {
+  width: 57vw;
+  height: 25vh;
+  display: flex;
+  margin-top: 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.messages {
+  height: 30vh;
+  width: 53vw;
+  margin: 25px;
+  margin-block-start: 0.5vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+}
+
+.msgBlock {
+  width: 53vw;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin-block-start: 5px;
+  padding: 0px 15px;
+  border-radius: 5px 0px px 5px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  animation: onload 1s ease-in;
+}
+
+@keyframes onload {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.msgLeft {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msgInfo {
+  height: 100%;
+  width: 40vw;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.msgImg {
+  width: 5vw;
+  height: 100%;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.msgImg .profilePicture {
+  height: 7vh;
+  width: 3.5vw;
+  border-radius: 50%;
+}
+
+.msgText {
+  margin-left: 5px;
+}
+
+.msgName {
+  margin-left: 5px;
+  font-size: large;
+  font-weight: 500;
+}
+
+.msgTime {
+  width: 9vw;
+}
+
+.colGrid .info {
+  height: 85vh;
+  width: 36vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.colGrid {
+  width: 93vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: hidden;
+  transform: translateY(2vh);
+}
+
+.info h3 {
+  opacity: 0.6;
+  padding-left: 30px;
+  margin-block-start: 15px;
+}
+
+.info .activeDiv {
+  width: 32vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.activeDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.info .active {
+  height: 10vh;
+  width: 28vw;
+  margin-top: 10px;
+  transform: translateY(10px);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+  display: flex;
+  padding: 5px;
+}
+
+.active .activeInfo {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0px 15px;
+}
+
+.activeInfo .activeTitle {
+  font-size: larger;
+  margin-block-end: 0px;
+  font-weight: 500;
+}
+
+.active hr {
+  height: 0.1px;
+  width: 100%;
+  background-color: #1a181a;
+  opacity: 0.2;
+  margin: 5px 0px 5px 0px;
+}
+
+.activeInfo .activeInvestor {
+  margin-block-end: 0px;
+  font-size: small;
+  color: darkblue;
+  margin-top: 0;
+}
+
+.activePrice {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-weight: bold;
+  color: green;
+}
+
+.info .accountsDiv {
+  width: 32vw;
+  height: 25vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.info .accounts {
+  height: 20vh;
+  width: 30vw;
+  margin: 25px;
+  margin-block-start: 0.5vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+  display: inline-block;
+  text-align: start;
+  padding: 5px;
+}
+
+.accounts img {
+  margin: 10px;
+}
+
+.donut-size {
+  font-size: 5em;
+}
+
+.pie-wrapper {
+  position: relative;
+  width: 1em;
+  height: 1em;
+}
+
+.pie {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  clip: rect(0, 1em, 1em, 0.5em);
+}
+
+.half-circle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10%;
+  height: 10%;
+  border: 0.05em solid #1abc9c;
+  border-radius: 50%;
+  clip: rect(0em, 0.25em, 25em, 0em);
+}
+
+.right-side {
+  transform: rotate(0deg);
+}
+
+.label {
+  position: absolute;
+  top: 0.52em;
+  right: 0.4em;
+  bottom: 0.4em;
+  left: 0.4em;
+  display: block;
+  background: none;
+  border-radius: 50%;
+  color: #7f8c8d;
+  font-size: 0.25em;
+  line-height: 2.6em;
+  text-align: center;
+  cursor: default;
+  z-index: 2;
+}
+
+.smaller {
+  padding-bottom: 20px;
+  color: #bdc3c7;
+  font-size: 0.45em;
+  vertical-align: super;
+}
+
+.shadow {
+  width: 100%;
+  height: 100%;
+  border: 0.1em solid #bdc3c7;
+  border-radius: 50%;
+}
+
+/* Dashboard ****************************************** */
+
+/* Idea Holder Home Screen ***************************** */
+
+.ideaHolderHomeScreen {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+}
+
+/* Idea Holder Home Screen ***************************** */
+
+/* Chat Screen ***************************************** */
+
+.chatScreen {
+  position: relative;
+  width: 93vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatDiv {
+  width: 61vw;
+  height: 100%;
+  border-right: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.chatHeader {
+  position: relative;
+  width: 100%;
+  z-index: -2;
+  height: 12vh;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.2);
+}
+
+.chatSection {
+  width: 100%;
+  height: 64vh;
+  background-color: white;
+  overflow: scroll;
+  box-shadow: inset 1px 1px 10px rgb(0, 0, 0, 0.2);
+}
+
+.chatSection::-webkit-scrollbar{
+  display: none;
+}
+
+.chatSection .recMsg {
+  display: flex;
+  padding: 0 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.recMsg p {
+  display: inline-block;
+  word-wrap: break-word;
+  background-color: #2d9dd8;
+  padding: 7px;
+  color: white;
+  font-weight: 500;
+  border-radius: 0px 5px 5px 5px;
+}
+
+.chatSection .sendMsg {
+  display: flex;
+  padding: 0px 20px 0px 0px;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.sendMsg p {
+  word-wrap: break-word;
+  background-color: #1778f2;
+  max-width: 45%;
+  padding: 7px;
+  color: #f9f9f9;
+  font-weight: 700;
+  border-radius: 5px 5px 0px 5px;
+}
+
+.chatText {
+  width: 100%;
+  height: 11vh;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 5;
+  box-shadow: 1px -5px 10px rgb(0, 0, 0, 0.1);
+}
+
+.chatTextField {
+  z-index: 1000;
+  width: 85%;
+  height: 60%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 1px -1px 10px rgb(0, 0, 0, 0.1);
+}
+
+.chatTextField input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 0px 10px;
+
+}
+
+.chatTextField input:focus{
+  outline: none;
+}
+
+.chatAttachment {
+  height: 100%;
+  width: 10%;
+  transform: scale(0.3, 0.3);
+}
+
+.chatMessageDiv {
+  z-index: -5;
+  width: 31vw;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.chatMessageDiv .msgBlock {
+  width: 31vw !important;
+  height: 12.5vh;
+  transform: translateY(-1vh);
+  padding: 0px 10px !important;
+  background-color: #ffffff;
+  border-bottom: 0.5px solid lightblue;
+}
+
+.chatMessageDiv .msgInfo {
+  width: 31vw !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.chatMessageDiv .msgInfo .msgName {
+  font-size: medium;
+  padding-left: 5px;
+}
+
+.chatMessageDiv .msgInfo .msgText {
+  font-size: small;
+  padding-left: 5px;
+}
+
+.chatMessageDiv .msgLeft {
+  width: 22vw;
+}
+
+.chatMessageDiv .msgTime {
+  font-size: small;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 5vw;
+}
+/* Chat Screen ***************************************** */

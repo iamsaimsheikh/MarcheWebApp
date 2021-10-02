@@ -19,7 +19,8 @@ function SideNav({setTab}) {
         }}>
             <img src={DashboardIcon} />
             </div>
-            <div style={active=='marketplace'?{borderRight:'5px solid #2d9dd8'}:null} onClick={()=>{setActive('marketplace')}}>
+            <div style={active=='marketplace'?{borderRight:'5px solid #2d9dd8'}:null} onClick={()=>{setActive('marketplace')
+        setTab('marketplace')}}>
             <img src={MarketplaceIcon} />
             </div>
             <div style={active=='message'?{borderRight:'5px solid #2d9dd8'}:null} onClick={()=>{setActive('message')

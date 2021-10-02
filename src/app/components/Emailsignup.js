@@ -1,10 +1,12 @@
 import React,{useState} from 'react'
 import Logo from '../assets/logo.svg'
 import GLogo from '../assets/googleLogo.svg'
+import ProgressBar from './ProgressBar';
 
 
-function Emailsignup({setScreenState}) {
+function Emailsignup({setScreenState,progress,setProgress}) {
     const [field,setfield] = useState(true);
+    
 
     const activateField = () =>{
         setfield(true)
@@ -17,6 +19,7 @@ function Emailsignup({setScreenState}) {
     return (
         <div className='emailSignUpDiv loginDiv'>
             <h1>Create Your Account</h1>
+            <ProgressBar progress={progress}/>
             <h3>iamsaimsheikh@gmail.com</h3>
 
             <div className="userInfoDiv">
@@ -57,8 +60,11 @@ function Emailsignup({setScreenState}) {
             </div>
 
 
-            <div className='formButton' onClick={() => setScreenState('login')}>
-                <p className='formButtonTxt'>Sign Up</p>
+            <div className='formButton' onClick={() => {
+                setScreenState('userinfo')
+                setProgress(50)
+                }}>
+                <p className='formButtonTxt'>Next</p>
             </div>
         </div>
     )

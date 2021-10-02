@@ -962,3 +962,395 @@ body {
   width: 5vw;
 }
 /* Chat Screen ***************************************** */
+
+
+/* Marketplace Screen ********************************** */
+
+.marketplaceScreen{
+  width: 93vw;
+  height: 100%;
+  overflow-y:hidden;
+  overflow-x: hidden;
+}
+
+.marketplaceScreen .marketplace{
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+}
+
+.marketplaceScreen .marketplace .searchBar{
+  width: calc(100vw - 10vw);
+  height: 4em;
+  background-color:#ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+}
+
+.marketplace .searchText{
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.marketplace .searchText input{
+  border: none;
+  background-color: transparent;
+  height: 3rem;
+  width: 100%;
+  padding: 5px;
+  font-size: large;
+  padding-left: 10px;
+}
+
+.marketplace h3{
+  text-align: left;
+  margin-left: 15px;
+  opacity: 0.5;
+}
+
+.marketplace .searchText input:focus{
+  outline: 3px solid #2d9dd8;
+}
+
+.marketplace .searchIcon{
+
+  height: 100%;
+  width: 7%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  
+}
+
+.marketplace .searchIcon img{
+  transform: scale(0.5,0.5);
+  opacity: 0.3;
+}
+
+.marketplace .recommendationGrid{
+  min-height: 400px;
+  width: calc(100vw - 12vw);
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  
+}
+
+.marketplace .recommendationGrid::-webkit-scrollbar-track
+{
+	background-color: lightblue;
+  
+
+}
+
+.marketplace .recommendationGrid::-webkit-scrollbar
+{
+  height: 10px;
+	width: 10px;
+  top: 100px;
+	background-color: #F5F5F5;
+  
+}
+
+.marketplace .recommendationGrid::-webkit-scrollbar-thumb
+{
+	background-color: #2d9dd8;
+  
+}
+
+.marketplace .productCard{
+  height: 22rem;
+  width: 14rem;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin: 10px;
+}
+
+.marketplace .productCard .productImage{
+  width: 100%;
+  height: 50%;
+  background-color: rgb(0, 0, 0, #fafafa);
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.marketplace .productImage img{
+  transform: scale(0.8,0.8);
+  z-index: 1;
+}
+
+.marketplace .productCard .productInfo{
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.marketplace .productCard .productInfo *{
+ margin: 0.5rem;
+}
+
+.marketplace .productCard .productInfo h1{
+  font-size: medium;
+  color: #1778f2;
+  font-weight: 600;
+}
+
+.marketplace .productCard .productInfo h2{
+  font-size: small;
+  color: #2d9dd8;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.rating{
+margin-left: 0.5rem;
+}
+
+.rating span i{
+  color: greenyellow;
+  margin: 2px;
+}
+
+.marketplace .productCard hr{
+  opacity: 1;
+}
+
+.marketplace .productCard .productOwnerInfo{
+  display: flex;
+  height: 20%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  border-top: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+
+
+.marketplace .productCard .productOwnerInfo .ppicture{
+height: 40px;
+width: 40px;
+border-radius: 50%;
+  }
+
+/* ************************ USER INFORMATION */
+.infoDiv{
+  display: flex;
+  height: 38em !important;
+  width: 500px;
+  background-color: #ffffff;
+  justify-content: start ;
+  align-items: center;
+  flex-direction: column;
+  
+  /* box-shadow: 3px 3px 10px gray; */
+  border: 0.5px solid rgb(0, 0, 0, 0.2);
+}
+
+.infoDiv h1{
+  color: #1a181a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.infoDiv h2{
+  color: #1a181a;
+  font-size: 28px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profilePictureDivSignup{
+  height: 25vh;
+  width: 25vh;
+  position: relative;
+  border-radius: 50%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+}
+
+.profilePictureDivSignup img{
+  width:50vh;
+  height: 50vh;
+  border-radius: 50%;
+}
+
+.keywordDivContainer{
+  height: fit-content;
+  width: 100%;
+
+}
+
+.keywordDiv{
+  height: fit-content;
+  display: inline-block;
+  padding: 5px;
+  background-color: #fcfcfc;
+  color: rgb(0, 0, 0, 0.6);
+  border-radius: 5px;
+  margin: 2px;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.1);
+  animation: moveBox 2s forwards 0s infinite;
+  cursor: pointer;
+}
+
+.keywordDiv:hover{
+  transition-duration: 0.5s;
+  background-color: #2d9dd8;
+  color: #fcfcfc;
+  
+}
+
+@keyframes moveBox {
+  0%{transform: translate(0px,0px);}
+  25%{transform: translate(0px,1.5px);}
+  50%{transform: translate(0px,0px);}
+  75%{transform: translate(0px,-1.5px);}
+  100%{transform: translate(0px,0px);}
+  
+}
+
+.infoDiv label{
+  padding: 10px;
+  background: transparent; 
+  display: table;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #2d9dd8;
+  border-radius: 5px;
+  border: 1px solid #2d9dd8;
+   }
+
+  .infoDiv label:hover{
+  background: #2d9dd8;
+  color: #fafafa;
+    }
+
+.infoDiv input[type="file"] {
+  display: none;
+}
+
+
+
+
+.infoDiv .formButton{
+  background-color: #ffffff;
+  border-color: #1a181a;
+  border:1px solid #1778f2;
+
+}
+
+.infoDiv .formButton p{
+  color: #1778f2;
+  font-weight: 500;
+}
+
+.keywordSelected{
+  background: #2d9dd8;
+  color: #fcfcfc;
+}
+
+.infoDiv button{
+ margin-top: 20px;
+}
+
+
+/* ********************** Social Accounts Info */
+
+.socialAccountsDiv {
+  width: 30vw;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialAccountsDiv img{
+  width: 25vw;
+}
+
+.socialAccountsDiv h3{
+  color: #1a181a;
+}
+
+.socialAccountFieldsContainer{
+  width: 80%;
+  height: 50%;
+}
+
+.socialAccountFieldsContainer div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 5px;
+  height: 7vh;
+}
+
+.socialAccountFieldsContainer input{
+  height: 7vh;
+  width: 70%;
+  margin: 10px;
+  border:none;
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+}
+
+.socialAccountFieldsContainer input:focus{
+  border: 1px solid #2d9dd8;
+  outline:none;
+}
+
+.socialAccountFieldsContainer img{
+  height: 10vh;
+  width: 10vh;
+}
+
+/* ********************* Progress Bar */
+
+.progresBars{
+  display: flex;
+  width: 90%;
+  height: 2vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.progresBars div{
+  height: 2vh;
+  width: 30%;
+  background: cornflowerblue;
+}
+
+.progresBars span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2vh;
+  width: 100%;
+}
+
+.productInfoScreen{
+  
+    width: 93vw;
+    height: 100%;
+    overflow-y:hidden;
+    overflow-x: hidden;
+  
+}

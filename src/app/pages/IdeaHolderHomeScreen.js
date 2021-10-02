@@ -3,24 +3,27 @@ import SideNav from "../components/SideNav";
 import TopNav from "../components/TopNav";
 import Dashboard from "../components/Dashboard";
 import Chat from "../components/Chat";
+import Marketplace from '../components/Marketplace'
 
-function IdeaHolderHomeScreen() {
+function IdeaHolderHomeScreen({profilePicture}) {
   const [tab, setTab] = useState("dashboard");
+  
 
-  const activeTab = (tab) => {
-    setTab(tab);
-  };
+  
 
   return (
     <div className="ideaHolderHomeScreen">
       <SideNav setTab={setTab} />
       <div>
-        <TopNav />
+        <TopNav profilePicture={profilePicture} />
         {tab === "dashboard" ? (
           <Dashboard />
         ) : tab === "chat" ? (
           <Chat />
-        ) : null}
+        ) : tab ==="marketplace" ? (
+          <Marketplace />
+        ) : tab === null 
+      }
       </div>
     </div>
   );

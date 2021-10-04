@@ -1,7 +1,11 @@
 import React from 'react'
-import Logo from '../assets/logo.svg'
+import Logo from '../assets/apple.svg'
 import ProfilePicture from '../assets/profilepicture.jpg'
 import Rating from './Rating'
+import Cover from '../assets/appleCover.jpg'
+import First from '../assets/appleWatch.jpg'
+import Second from '../assets/appleMac.jpg'
+import Third from '../assets/appleAirpod.jpeg'
 
 function ProductInfo() {
 
@@ -21,14 +25,30 @@ function ProductInfo() {
         <div className="productInfoScreen">
 
             <div className="productDetail">
-                <img src={product._image}/>
+                <div className='productLogoDiv'>
+                <img className='productDetailLogo' src={product._image}/>
+                </div>
                 <h2>{product._tagLine}</h2>
+                
+                <img src={ProfilePicture} style={{height:"50px",width:"50px",borderRadius:"50%"}} />
                 <Rating rating={product._userRating} />
+                
                 <h2>About {product._name} </h2>
                 <p>{product._desc}</p>
-            </div>
 
-            <div className="productDisplay">
+                <div className='productDetailImg'>
+            <div className='productDetailCoverImg'>
+                <img src={Cover} />
+            </div>
+            <div className='productDetailImgGrid'>
+             <div>   
+            <img src={Second} className='productDetailImgGridCol' />
+             </div>
+             <div>   
+            <img src={Third} className='productDetailImgGridCol'/>
+             </div>
+            </div>
+            </div>
 
             </div>
             

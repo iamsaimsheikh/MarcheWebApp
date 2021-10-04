@@ -1,11 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Logo from '../assets/logo.svg'
 import GLogo from '../assets/googleLogo.svg'
 import FLogo from '../assets/facebookLogo.svg'
 
-function login({setScreenState}) {
+function Login({setScreenState}) {
 
-
+    const [email, setEmail]= useState('');
+    const [password, setPassword]= useState('');
     return (
         <div className='loginDiv'>
             <img src={Logo}></img>
@@ -28,4 +29,4 @@ function login({setScreenState}) {
     )
 }
 
-export default login
+export default Login

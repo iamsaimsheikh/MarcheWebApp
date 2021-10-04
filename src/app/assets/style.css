@@ -1,5 +1,7 @@
 body {
   background-color: #f9f9f9;
+  overflow-x: hidden;
+  
 }
 
 /* SPLASH SCREEN ************************************* */
@@ -362,7 +364,8 @@ body {
   justify-content: space-between;
   align-items: center;
   left: 0;
-  position: relative;
+  top: 0;
+  position: sticky;
   box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.2);
 }
 
@@ -1347,10 +1350,65 @@ border-radius: 50%;
 }
 
 .productInfoScreen{
+    height: 87vh;
+    overflow-y: auto;
+    width: 100%;
   
-    width: 93vw;
-    height: 100%;
-    overflow-y:hidden;
-    overflow-x: hidden;
-  
+}
+
+.productDetail{
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: ease-in 1s 1s;
+}
+
+.productDetail p{
+  width: 80vw;
+}
+
+
+.productDetailImg .productDetailCoverImg{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productDetailImg .productDetailCoverImg img{
+  margin-top: 50px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.2);
+}
+
+
+.productDetailLogo{
+  width: 10vw;
+  margin-top: 50px;
+}
+
+.productDetailImgGrid{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.productDetailImgGridCol{
+  width: 35vw;
+}
+
+.productDetailImgGrid img{
+  margin: 5px;
+  border-radius: 10px;
+}
+
+
+.productDetailLogo .productLogoDiv{
+  width: 15vw;
 }

@@ -14,6 +14,21 @@ body {
   justify-content: center;
 }
 
+.burger-nav{
+  display: none;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.sideNav h1{
+  display: none;
+}
+
+.burger-nav button{
+  cursor: pointer;
+  z-index: 1000;
+}
+
 .logo {
   transform: scale(0.8, 0.8);
   z-index: 1;
@@ -1411,4 +1426,1167 @@ border-radius: 50%;
 
 .productDetailLogo .productLogoDiv{
   width: 15vw;
+}
+
+
+
+
+/* Tablet Screen ----------------------------------------------------- */
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+/* Top Nav ******************************************* */
+
+.topNav {
+  width: 93vw;
+  height: 7vh;
+}
+
+.topNav .logoDiv {
+  width: 15%;
+}
+
+
+
+.topNav .profilePictureDiv {
+  width: 50vw;
+}
+
+.topNav .profilePicture {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid #2d9dd8;
+}
+
+.topNav button {
+  border: 0.5px solid darkblue;
+  background-color: #ffffff;
+  width: 12vw;
+  height: 3vh;
+  color: darkblue;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.topNav .notificationIcon {
+  width: 3vw;
+  height: 3vh;
+}
+
+/* Top Nav ******************************************* */
+
+/* Side Nav ******************************************* */
+
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 7vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 10;
+  justify-content: flex-end;
+  align-items: center;
+  left: 0;
+  position: sticky;
+}
+
+.sideNav div {
+  display: flex;
+  width: 100%;
+  height: 12vh;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-3vh);
+}
+
+.sideNav img {
+  transform: scale(0.5, 0.5);
+  background-color: white;
+}
+
+/* Side Nav ******************************************* */
+
+
+.colGrid .info {
+  height: 85vh;
+  width: 93vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+.colGrid .infoSocial{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.colGrid .infoInvest{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.colGrid {
+  width: 93vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: hidden;
+  transform: translateY(2vh);
+}
+
+.colGrid .dashboard{
+  width: 93vw;
+}
+
+/* Dashboard ****************************************** */
+
+.dashboard {
+  height: 70vh;
+  width: 93vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.dashboard .heading {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  margin-block-start: 0;
+}
+
+.dashboard h1 {
+  color: #1a181a;
+  opacity: 0.8;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.dashboard h3 {
+  padding-left: 0;
+  text-align: start;
+  margin-block-start: 10px;
+  color: #1a181a;
+  opacity: 0.6;
+}
+
+.dChartDiv {
+  width: 100vw;
+  height: 25vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dChart {
+  height: 22vh;
+  width: 22vw;
+  margin: 25px;
+  margin-block-start: 2vh;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+.progressWrapper {
+  align-self: flex-start;
+  height: 1vh;
+  border-radius: 5px;
+  margin-block-end: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.dChart .progress {
+  height: 0.75vh;
+  background: gold;
+  animation: progressBar 1s ease-in-out;
+  animation-fill-mode: both;
+  border-radius: 5px;
+}
+
+.dChart h2 {
+  font-size: 64px;
+  margin-block-start: 10;
+  color: rgb(0, 0, 0, 0.8);
+}
+
+.dChart h3 {
+  font-size: medium;
+  font-weight: 500;
+  align-self: center;
+  margin-block-start: 10;
+  color: rgb(0, 0, 0, 0.9);
+}
+
+.dChart:nth-of-type(2) .progress {
+  background: red;
+}
+
+.dChart:nth-of-type(3) .progress {
+  background: lightgreen;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.messagesDiv {
+  width: 93vw;
+  height: 25vh;
+  display: flex;
+  margin-top: 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.messages {
+  height: 25vh;
+  width: 87vw;
+  margin: 25px;
+  margin-block-start: 0.5vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+}
+
+.msgBlock {
+  width: 87vw;
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin-block-start: 5px;
+  padding: 0px 15px;
+  border-radius: 5px 0px px 5px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  animation: onload 1s ease-in;
+}
+
+@keyframes onload {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.msgLeft {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msgInfo {
+  height: 100%;
+  width: 40vw;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.msgImg {
+  width: 10vw;
+  height: 100%;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.msgImg .profilePicture {
+  height: 6vh;
+  width: 8vw;
+  border-radius: 50%;
+}
+
+.msgText {
+  margin-left: 5px;
+}
+
+.msgName {
+  margin-left: 5px;
+  font-size: large;
+  font-weight: 500;
+}
+
+.msgTime {
+  width: 9vw;
+}
+
+.info .activeDiv {
+  width: 50vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.activeDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.info .active {
+  height: 10vh;
+  width: 45vw;
+  margin-top: 10px;
+  transform: translateY(10px);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+  display: flex;
+  padding: 5px;
+}
+
+.active .activeInfo {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0px 15px;
+}
+
+.activeInfo .activeTitle {
+  font-size: larger;
+  margin-block-end: 0px;
+  font-weight: 500;
+}
+
+.active hr {
+  height: 0.1px;
+  width: 100%;
+  background-color: #1a181a;
+  opacity: 0.2;
+  margin: 5px 0px 5px 0px;
+}
+
+.activeInfo .activeInvestor {
+  margin-block-end: 0px;
+  font-size: small;
+  color: darkblue;
+  margin-top: 0;
+}
+
+.activePrice {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-weight: bold;
+  color: green;
+}
+
+.info .accountsDiv {
+  width: 40vw;
+  height: 32vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.info .accounts {
+  height: 10vh;
+  width: 40vw;
+  margin: 25px;
+  margin-block-start: 0.5vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+  display: inline-block;
+  text-align: start;
+  padding: 5px;
+}
+
+}
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    /* Top Nav ******************************************* */
+
+.topNav {
+  width: 100vw;
+  height: 8vh;
+  z-index: 10;
+}
+
+.topNav .logoDiv {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logoDiv img{
+  margin: 20px 0px 10px 10px;
+}
+
+
+
+.topNav .profilePictureDiv {
+  width: 50vw;
+}
+
+.topNav .profilePicture {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #2d9dd8;
+}
+
+.topNav button {
+  border: 0.5px solid darkblue;
+  background-color: #ffffff;
+  width: 15vw;
+  height: 3vh;
+  color: darkblue;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.topNav .notificationIcon {
+  width: 5vw;
+  height: 5vh;
+}
+
+/* Top Nav ******************************************* */
+
+/* Side Nav ******************************************* */
+
+.sideNav {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 10;
+  justify-content: flex-end;
+  align-items: center;
+  left: 0;
+  position: sticky;
+}
+
+.sideNavActive{
+  display: flex;
+}
+
+.sideNav div {
+  display: flex;
+  height: 12vh;
+  border-bottom: 0.5px solid rgb(0, 0, 0, 0.1);
+  align-items:center;
+}
+
+.sideNav div:hover{
+  background-color: #F5F5F5;
+}
+
+.sideNav img {
+  transform: scale(0.1, 0.1);
+  background-color: white;
+  margin: 10px;
+}
+
+.sideNav h1{
+  display: block;
+  width: 85vw;
+  height: 12vh;
+  text-align: right;
+  color: #1778f2;
+}
+
+.sideNav h1 button{
+  height: 7.5vh;
+  width: 13vw;
+  background-color: white;
+  border-radius: 50px;
+  border: 1px solid #2d9dd8;
+  font-size: x-large;
+  color:#2d9dd8;
+}
+
+/* Side Nav ******************************************* */
+
+
+.colGrid .info {
+  height: 85vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 25px;
+  
+}
+
+.colGrid .infoSocial{
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.colGrid .infoInvest{
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoInvest .heading{
+  align-self: flex-start;
+  text-align: left;
+}
+
+
+
+.colGrid {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: hidden;
+  z-index: -1;
+  transform: translateY(2vh);
+  
+}
+
+.colGrid .dashboard{
+  width: 93vw;
+}
+
+/* Dashboard ****************************************** */
+
+.dashboard {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dashboard .heading {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  margin-block-start: 0;
+}
+
+.dashboard h1 {
+  color: #1a181a;
+  opacity: 0.8;
+  margin-left: 15px;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.dashboard h3 {
+  padding-left: 0;
+  margin-left: 15px;
+  margin-block-start: 10px;
+  color: #1a181a;
+  opacity: 0.6;
+}
+
+.dChartDiv {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dChart {
+  height: 12vh;
+  width: 19vw;
+  margin: 5px;
+  margin-block-start: 0vh;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+.dChart  h3{
+  margin-left: 0px !important;
+}
+
+.progressWrapper {
+  align-self: flex-start;
+  height: 1vh;
+  border-radius: 5px;
+  margin-block-end: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.dChart .progress {
+  height: 0.75vh;
+  background: gold;
+  animation: progressBar 1s ease-in-out;
+  animation-fill-mode: both;
+  border-radius: 5px;
+}
+
+.dChart h2 {
+  font-size: 12px;
+  margin-block-start: 10;
+  color: rgb(0, 0, 0, 0.8);
+}
+
+.dChart h3 {
+  font-size: x-small;
+  font-weight: 500;
+  align-self: center;
+  margin-block-start: 0;
+  color: rgb(0, 0, 0, 0.9);
+}
+
+.dChart:nth-of-type(2) .progress {
+  background: red;
+}
+
+.dChart:nth-of-type(3) .progress {
+  background: lightgreen;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.messagesDiv {
+  width: 93vw;
+  height: 25vh;
+  display: flex;
+  margin-top: 5px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.messages {
+  height: 25vh;
+  width: 87vw;
+  margin: 25px;
+  margin-block-start: 0.5vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+}
+
+.msgBlock {
+  width: 87vw;
+  height: 7.5vh;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin-block-start: 5px;
+  padding: 0px 15px;
+  border-radius: 5px 0px px 5px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  animation: onload 1s ease-in;
+}
+
+@keyframes onload {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.msgLeft {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msgInfo {
+  height: 100%;
+  width: 40vw;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.msgImg {
+  width: 10vw;
+  height: 100%;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.msgImg .profilePicture {
+  height: 6vh;
+  width: 12vw;
+  border-radius: 50%;
+}
+
+.msgText {
+  margin-left: 5px;
+  width: 100%;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  text-align: start;
+}
+
+.msgName {
+  margin-left: 5px;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.msgTime {
+  width: 12vw;
+}
+
+.info .activeDiv {
+  width: 95vw;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  box-shadow: 0px 0px 5px  rgb(0, 0, 0, 0.1);
+  
+}
+
+.info h3{
+  text-align: left !important;
+}
+
+.activeDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.info .active {
+  height: 7vh;
+  width: 90vw;
+  margin-top: 10px;
+  transform: translateY(10px);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+  display: flex;
+  padding: 5px;
+}
+
+.active .activeInfo {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0px 15px;
+}
+
+.activeInfo .activeTitle {
+  font-size: larger;
+  margin-block-end: 0px;
+  font-weight: 500;
+}
+
+.active hr {
+  height: 0.1px;
+  width: 100%;
+  background-color: #1a181a;
+  opacity: 0.2;
+  margin: 5px 0px 5px 0px;
+}
+
+.activeInfo .activeInvestor {
+  margin-block-end: 0px;
+  font-size: small;
+  color: darkblue;
+  margin-top: 0;
+}
+
+.activePrice {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  font-weight: bold;
+  color: green;
+}
+
+.info .accountsDiv {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.info .accounts {
+  height: 17vh;
+  width: 100vw;
+  margin: 25px;
+  margin-block-start: 0.5vh;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.2);
+  display: inline-block;
+  text-align: start;
+  padding: 5px;
+}
+
+.burger-nav{
+  
+  margin-left: 25px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+.burger-nav-icon{
+  cursor: pointer;
+  font-size: 40px;
+  color: #1778f2;
+}
+
+
+
+.burger-nav button{
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.displayNull {
+  display: none;
+}
+
+/* Marketplace Screen ********************************** */
+
+.marketplaceScreen{
+  width: 100vw;
+  height: 100%;
+  overflow-y:hidden;
+  overflow-x: hidden;
+}
+
+.marketplaceScreen .marketplace{
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+}
+
+.marketplaceScreen .marketplace .searchBar{
+  width: 90vw;
+  height: 3em;
+  margin-left: 5vw;
+  margin-top: 2vh;
+  background-color:#ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+}
+
+.marketplace .searchText{
+  height: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.marketplace .searchText input{
+  border: none;
+  background-color: transparent;
+  height: 3rem;
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  font-size: small;
+}
+
+.marketplace h3{
+  text-align: left;
+  margin-left: 15px;
+  opacity: 0.5;
+}
+
+.marketplace .searchText input:focus{
+  border: 0px 0px 0px 0px solid #2d9dd8;
+}
+
+.marketplace .searchIcon{
+
+  height: 100%;
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  
+}
+
+.marketplace .searchIcon img{
+  transform: scale(0.5,0.5);
+  opacity: 0.3;
+}
+
+.marketplace .recommendationGrid{
+  min-height: 330px;
+  width: calc(100vw - 10vw);
+  display: flex;
+  margin-left: 10px;
+  flex-direction: row;
+  overflow-x: scroll;
+  
+}
+
+.marketplace .recommendationGrid::-webkit-scrollbar-track
+{
+	background-color: lightblue;
+  
+
+}
+
+.marketplace .recommendationGrid::-webkit-scrollbar
+{
+  height: 5px;
+	width: 5px;
+  top: 100px;
+	background-color: #F5F5F5;
+  
+}
+
+.marketplace .recommendationGrid::-webkit-scrollbar-thumb
+{
+	background-color: #2d9dd8;
+  
+}
+
+.marketplace .productCard{
+  height: 18rem;
+  width: 12rem;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin: 10px;
+}
+
+.marketplace .productCard .productImage{
+  width: 100%;
+  height: 50%;
+  background-color: rgb(0, 0, 0, #fafafa);
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.marketplace .productImage img{
+  transform: scale(0.8,0.8);
+  z-index: 1;
+}
+
+.marketplace .productCard .productInfo{
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.marketplace .productCard .productInfo *{
+ margin: 0.5rem;
+}
+
+.marketplace .productCard .productInfo h1{
+  font-size: medium;
+  color: #1778f2;
+  font-weight: 600;
+}
+
+.marketplace .productCard .productInfo h2{
+  font-size: small;
+  color: #2d9dd8;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.rating{
+margin-left: 0.5rem;
+}
+
+.rating span i{
+  color: greenyellow;
+  margin: 2px;
+}
+
+.marketplace .productCard hr{
+  opacity: 1;
+}
+
+.marketplace .productCard .productOwnerInfo{
+  display: flex;
+  height: 20%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  border-top: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+
+
+.marketplace .productCard .productOwnerInfo .ppicture{
+height: 40px;
+width: 40px;
+border-radius: 50%;
+  }
+
+
+.loginDiv {
+  
+  /* box-shadow: 3px 3px 10px gray; */
+  border: none;
+}
+
+.textfield{
+  width: 80vw;
+  height: 5vh;
+}
+
+.userInfoDiv {
+  flex-direction: column;
+}
+
+.emailSignUpDiv{
+  margin-top: -200px;
+}
+
+.userInfoDivPassword{
+ width: 90vw !important;
+ height: 10vh !important;
+}
+
+.userInfoDivPassword input{
+  width: 90vw !important;
+  height: 7vh !important;
+ }
+
+ .emailSignUpDiv .userInfoDivPassword span{
+   margin-top: 7px;
+   font-size: large;
+ }
+
+ .infoDiv {
+  display: flex;
+  height: 50em !important;
+  width: 500px;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* box-shadow: 3px 3px 10px grey; */
+  border: 0.5px solid rgb(0, 0, 0, 0.2);
+}
+
+.infoDiv{
+  margin-top: 10px;
+  height: 100vh !important;
+  border:none;
+}
+
+
+
+
+
+.infoDiv img{
+  width: 50vw !important;
+  
+}
+
+.socialAccountFieldsContainer{
+  margin-left: -20px;
+  width: 100vw;
+  height: 50vh;
+}
+
+.socialAccountFieldsContainer img {
+  width: 30vw !important;
+}
+
 }

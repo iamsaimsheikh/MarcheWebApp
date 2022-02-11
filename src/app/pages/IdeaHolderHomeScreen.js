@@ -7,21 +7,22 @@ import Marketplace from '../components/Marketplace'
 
 function IdeaHolderHomeScreen({profilePicture}) {
   const [tab, setTab] = useState("dashboard");
+  const [sidebarActive,setSidebarActive] = useState(false);
   
 
   
 
   return (
     <div className="ideaHolderHomeScreen">
-      <SideNav setTab={setTab} />
+      <SideNav setTab={setTab} sidebarActive={sidebarActive} setSidebarActive={setSidebarActive} />
       <div>
-        <TopNav profilePicture={profilePicture} />
+        <TopNav profilePicture={profilePicture} sidebarActive={sidebarActive} setSidebarActive={setSidebarActive} />
         {tab === "dashboard" ? (
-          <Dashboard />
+          <Dashboard sidebarActive={sidebarActive} setSidebarActive={setSidebarActive} />
         ) : tab === "chat" ? (
-          <Chat />
+          <Chat  />
         ) : tab ==="marketplace" ? (
-          <Marketplace />
+          <Marketplace sidebarActive={sidebarActive} setSidebarActive={setSidebarActive} />
         ) : tab === null 
       }
       </div>

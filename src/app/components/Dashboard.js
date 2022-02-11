@@ -9,9 +9,13 @@ import ProfilePicture from '../assets/profilepicture.jpg'
 import esterPicture from '../assets/ester.jpg'
 import salihaPicture from '../assets/salihaAhmed.png'
 
-function Dashboard() {
+function Dashboard({sidebarActive}) {
+
+  console.log(sidebarActive)
+
   return (
-    <div className="colGrid">
+    <div className={sidebarActive == false ? 'colGrid' : 'displayNull'}>
+      
       <div className="dashboard">
         <div className="heading">
           <h1>Dashboard</h1>
@@ -95,6 +99,7 @@ function Dashboard() {
       </div>
 
       <div className="info">
+        <div className='infoInvest'>
         <div className="heading">
           <h3>Active Investments</h3>
         </div>
@@ -131,7 +136,9 @@ function Dashboard() {
               </div>
           </div>
         </div>
+        </div>
 
+        <div className='infoSocial'>
         <div className="heading">
           <h3>Social Accounts</h3>
         </div>
@@ -167,6 +174,7 @@ function Dashboard() {
               />
             </a>
           </div>
+        </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import Products from './Products';
 import ProductInfo from './ProductInfo';
 
 
-function Marketplace() {
+function Marketplace({sidebarActive,setSidebarActive}) {
 
     const [searchText,setSearchText] = useState("");
     const [selectedProduct,setSelectedProduct]= useState(null);
@@ -12,7 +12,8 @@ function Marketplace() {
 
     useEffect(() => {
         setSearchText(searchText)
-    }, [searchText])
+        setSidebarActive(sidebarActive)
+    }, [searchText,sidebarActive])
 
 
    
@@ -25,7 +26,7 @@ function Marketplace() {
 
             productSelected === true ?  <ProductInfo /> :
 
-        <div className='marketplaceScreen'>
+        <div className={sidebarActive == false ? 'marketplaceScreen' : 'displayNull'} >
             <div className='marketplace'>
                 <div className='searchBar'>
                     <div className='searchIcon'>

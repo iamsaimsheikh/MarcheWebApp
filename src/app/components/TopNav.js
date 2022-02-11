@@ -1,18 +1,32 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import Logo from '../assets/logo.svg'
 
 import NotificationIcon from '../assets/icons/notificationIcon.svg'
 
-function TopNav({profilePicture}) {
+function TopNav({profilePicture,sidebarActive,setSidebarActive}) {
 
     const [active,setActive] = useState('dashboard')
 
+    useEffect(() => {
+        setSidebarActive(sidebarActive)
+    }, [sidebarActive])
+
 
     return (
-        <div className='topNav'>
+        <div className={sidebarActive === false ? 'topNav' : 'displayNull'}>
 
-            <div className='logoDiv'>
-            <img src={Logo} className='logo'/>
+            <div className='logoDiv'  >
+            <div className='burger-nav' >
+                <div className='burger-nav-icon' onClick={()=>{
+                    setSidebarActive(true)
+                    console.log(sidebarActive)
+                }} >
+                ≡
+                </div>
+                <div className='burger-nav-links'>
+                </div>
+            </div>
+            <img src={Logo}  className='logo'/>
             </div>
 
             <div className='profilePictureDiv'>

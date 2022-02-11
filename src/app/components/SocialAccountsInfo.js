@@ -23,7 +23,7 @@ function SocialAccountsInfo({setScreenState,progress,setProgress}) {
 
     return (
         <div className='infoDiv socialAccountsDiv emailSignUpDiv loginDiv'>
-            <img src={Logo}></img>
+            <img className='infoLogo' src={Logo}></img>
 
             <ProgressBar progress={progress}/>
 
